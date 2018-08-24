@@ -1,0 +1,33 @@
+.down input[type="submit"] {
+    
+    width: 37%;
+    background: rgba(59, 89, 152);
+    color: #f9f9f9;
+    font-size: 13px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor:pointer;
+}
+div .down
+{
+	padding-top: 10px;
+}
+@media screen and (max-width: 768px){
+	.down input[type="submit"] {
+    width: 37%;
+    background: rgba(59, 89, 152);
+    color: #f9f9f9;
+    font-size: 13px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor:pointer;
+}
+div .down
+{
+	margin: 0px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+}
+}

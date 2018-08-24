@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="pop.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+   ></script>
+    <style>
+    
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+body{
+  font-family: 'Mukta', sans-serif;
+	height:100vh;
+	min-height:550px;
+	background-image:url(5.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+    overflow-y: hidden;
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	text-align:center;
+    width:60%;
+	right:0;left:0;
+    margin:auto;
+    height:350px;
+    background-color: rgba(59, 89, 152,0.8);
+}
+.white-panel{
+    background-color: rgba(255,255, 255, 1);
+    height:470px;
+    position:absolute;
+    top:-60px;
+    width:50%;
+    right:calc(50% - 50px);
+    transition:.3s ease-in-out;
+    z-index:0;
+}
+.login-reg-panel input[type="radio"]{
+    position:relative;
+    display:none;
+}
+.login-reg-panel{
+    color:#fff;
+}
+.login-reg-panel #label-login, 
+.login-reg-panel #label-register{
+    border:1px solid #9E9E9E;
+    padding:0 5px;
+    width:150px;
+    display:block;
+    text-align:center;
+    border-radius:3px;
+    cursor:pointer;
+}
+.login-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    left:0;
+    position:absolute;
+    text-align:left;
+}
+.register-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    right:0;
+    position:absolute;
+    text-align:left;
+    
+}
+.right-log{right:50px !important;}
+
+.login-show, 
+.register-show{
+    z-index: 1;
+    display:none;
+    opacity:0;
+    transition:0.3s ease-in-out;
+    color:#242424;
+    text-align:left;
+    padding:50px;
+}
+.show-log-panel{
+    display:block;
+    opacity:0.9;
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+    width: 90%;
+    display: block;
+    margin:15px 0;
+    padding: 9px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.login-show input[type="button"] {
+    max-width: 250px;
+    width: 100%;
+    background: rgba(59, 89, 152);
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor:pointer;
+}
+.login-show a{
+    color: black;
+    display:inline-block;
+    padding:10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="tel"], .register-show input[type="password"]{
+    width: 90%;
+    display: block;
+    margin:15px 0;
+    padding: 9px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.register-show input[type="button"] {
+    max-width: 250px;
+    width: 100%;
+    background: rgba(59, 89, 152);
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor:pointer;
+}
+.credit {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color: #3B3B25;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 99;
+}
+a{
+  text-decoration:none;
+  color:black;
+}
+
+    </style>
+</head>
+<body>
+
+   
+
+  	<div class="login-reg-panel">
+        <div class="box"></div>
+		<div class="login-info-box">
+			<h2>Have an account?</h2>
+			<p>Login with new amazing posts <font size="5px">😍 </font></p>
+			<br><br><br>
+            <label id="label-register" for="log-reg-show">Login</label>
+			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+		</div>
+							
+		<div class="register-info-box">
+			<h2>Don't have an account?</h2>
+			<p>Sign Up to get in touch with your friends and for entertainment also.
+                <font size="5px">😀 </font>
+                </p><br>
+			<label id="label-login" for="log-login-show">Sign Up</label>
+			<input type="radio" name="active-log-panel" id="log-login-show">
+		</div>
+							
+		<div class="white-panel">
+			<div class="login-show">
+				<h2>LOGIN</h2>
+                <br>
+				<input type="text" placeholder="Email">
+				<input type="password" placeholder="Password">
+                <br>
+				<center><input type="button" value="Login">
+                <br>
+<div class="box">
+    <a class="button" href="#popup1">Forgot password?</a>
+
+
+				</center>
+			</div>
+			<div class="register-show">
+				<h2>SIGN UP</h2>
+				<input type="text" placeholder="Email">
+                <input type="tel" placeholder="Phone Number">
+				<input type="password" placeholder="Password">
+				<input type="password" placeholder="Confirm Password">
+                <br>
+				<center><input type="button" value="Signup"></center>
+			</div>
+		</div>
+	</div>
+  <script>
+    $(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.login-show').addClass('show-log-panel');
+});
+
+
+$('.login-reg-panel input[type="radio"]').on('change', function() {
+    if($('#log-login-show').is(':checked')) {
+        $('.register-info-box').fadeOut(); 
+        $('.login-info-box').fadeIn();
+        
+        $('.white-panel').addClass('right-log');
+        $('.register-show').addClass('show-log-panel');
+        $('.login-show').removeClass('show-log-panel');
+        
+    }
+    else if($('#log-reg-show').is(':checked')) {
+        $('.register-info-box').fadeIn();
+        $('.login-info-box').fadeOut();
+        
+        $('.white-panel').removeClass('right-log');
+        
+        $('.login-show').addClass('show-log-panel');
+        $('.register-show').removeClass('show-log-panel');
+    }
+});
+</script>
+</div>
+ <div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>Here i am</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <input type="text" placeholder="Email">
+      <input type="submit" value="submit">
+        </div>
+    </div>
+</div>
+</body>
+</html>
