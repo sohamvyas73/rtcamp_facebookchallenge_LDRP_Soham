@@ -4,12 +4,20 @@ Developer : Soham Vyas
 
 Languages : PHP
 
-Applying for Front-End
+Applying for Back-End
+
+### Required Information
+* First extract facebook.zip and google.zip for api.
+* Replace your auth values.
+* For basic demo use Username : sohamvyas73@gmail.com and password : test (to test and Login in our website please inform us with facebook id).
 
 ### Description
 * rt-facebookchallenge is a website where user first have to login on our website and then redirecting to facebook login if credentials are already there then directly main page will comeout and if user is not logged in then facebook authentication will come.
-* After getting logged in user can see his albums photos where if User want to download the albums then he/she can download selected albums or click on download all.
-* If user want to take backup of facebook images in google drive then he/she can click on google button and directly he/she will be redirected to next page to add images on google drive.
+* After getting logged in user can see his albums photos where if User want to download the albums then he/she can download selected albums or click on dwnload all.
+* If user want to take backup of facebook images in google drive then he/she can click on google button and directly he/she will be redirected to next page to add images on google drive containing folders within ZIP file.
+
+### Demo Link
+http://sv.project.stepinsolutions.in/
 
 ### Screenshots
 1. First Loader
@@ -71,3 +79,6 @@ Applying for Front-End
 * Youtube
 * Geeks for Geeks
 * GitHub
+
+### Contact Info 
+* sohamvyas73@gmail.com
