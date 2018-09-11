@@ -1,10 +1,8 @@
-# rtcamp_facebookchallenge_LDRP_Ronak
+# rtcamp_facebookchallenge_LDRP_Soham
 
-Developer : Ronak Gajjar
+Developer : Soham Vyas
 
-Languages : JavaScript,JQuery
-
-UI : Pure CSS(Not used any external framework)
+Languages : PHP
 
 Applying for Front-End
 
